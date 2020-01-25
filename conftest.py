@@ -3,6 +3,7 @@ from fixture.application import Application
 
 fixture = None
 
+
 @pytest.fixture
 def app(request):
     global fixture
@@ -21,5 +22,6 @@ def stop(request):
     def fin():
         fixture.session.logout()
         fixture.destroy()
+
     request.addfinalizer(fin)
     return fixture
