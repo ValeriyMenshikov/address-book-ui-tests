@@ -9,8 +9,10 @@ def test_edit_first_contact(app):
                                    email2="asdsad@mail.ru", email3="ghh213@gmail.ru", homepage="asdasd", bday="1",
                                    bmonth="January", byear="1999", aday="11", amonth="February", ayear="2000",
                                    address2="sdfsdfsdf", phone2="ghjnhjkn", notes="hgjkhmjkhjkm"))
-
+    old_contacts = app.contact.get_contact_list()
     app.contact.edit_first_contact(Contact(firstname="fdsdf", middlename="asdffssdasd", lastname="213123f",
                                            nickname="12fdvsdf", byear="2000", aday="11",
                                            amonth="February", ayear="2001", address2="asdawe21e2", phone2="123123dasf",
                                            notes="sfdsd"))
+    new_contacts = app.contact.get_contact_list()
+    assert len(old_contacts) == len(new_contacts)
