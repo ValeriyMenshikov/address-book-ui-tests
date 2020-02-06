@@ -2,7 +2,7 @@ from model.group import Group
 from random import randrange
 
 
-def test_edit_first_group(app):
+def test_edit_some_group(app):
     if app.group.count() == 0:
         group = Group(name="1111", header="111", footer="111")
         app.group.create(group)

@@ -2,7 +2,7 @@ from model.contact import Contact
 from random import randrange
 
 
-def test_edit_first_contact(app):
+def test_edit_some_contact(app):
     if app.contact.count() == 0:
         contact = Contact(firstname="asdasdasd", middlename="asdasd", lastname="asdfvf", nickname="asdfsdf",
                           title="sadfvsdf", company="asdfsdfsdf", address="bvbbgfbdfgb", home="dcfscfsd",
