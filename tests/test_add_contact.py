@@ -33,6 +33,8 @@ def test_add_contact_name(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
 
 
 test_data = [''] + [random_string(12) for _ in range(2)]
@@ -57,6 +59,8 @@ def test_add_contact_middlename(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
 
 
 test_data = [''] + [random_string(12) for _ in range(2)]
@@ -81,6 +85,8 @@ def test_add_contact_lastname(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
 
 
 test_data = [''] + [random_string(12) for _ in range(2)]
@@ -105,6 +111,8 @@ def test_add_contact_nickname(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
 
 
 test_data = [''] + [random_string(12) for _ in range(2)]
@@ -129,6 +137,8 @@ def test_add_contact_title(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
 
 
 test_data = [''] + [random_string(12) for _ in range(2)]
@@ -153,6 +163,8 @@ def test_add_contact_company(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
 
 
 test_data = [''] + [random_string(12) for _ in range(2)]
@@ -177,6 +189,8 @@ def test_add_contact_address(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
 
 
 test_data = [''] + [random_string(12) for _ in range(2)]
@@ -201,3 +215,5 @@ def test_add_contact_homephone(app, field):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()
