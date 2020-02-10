@@ -37,7 +37,13 @@ class Contact:
         self.all_phones_from_home_page = all_phones_from_home_page
 
     def __repr__(self):
-        return "%s:%s:%s" % (self.firstname, self.lastname, self.id)
+        return f"firstname={self.firstname}, middlename={self.middlename}, lastname={self.lastname}, " \
+               f"nickname={self.nickname}, title={self.title}, company={self.company}, address={self.address}, " \
+               f"homephone={self.homephone}, mobilephone={self.mobilephone}, workphone={self.workphone}, " \
+               f"faxphone={self.faxphone}, mail={self.mail}, email2={self.email2}, email3={self.email3}, " \
+               f"homepage={self.homepage}, bday={self.bday}, bmonth={self.bmonth}, byear={self.byear}, " \
+               f"aday={self.bday}, amonth={self.bmonth}, ayear={self.byear}, address2={self.address2}, " \
+               f"secondaryphone={self.secondaryphone}"
 
     def __eq__(self, other):
         return self.lastname == other.lastname, self.firstname == other.firstname and \

@@ -10,9 +10,8 @@ class ContactHelper:
 
     def open_home_page(self):
         wd = self.app.wd
-        # todo переписать проверку страницы
-        # if len(wd.find_elements_by_name("searchstring")) < 0:
-        wd.find_element_by_link_text("home").click()
+        if not len(wd.find_elements_by_name("searchstring")) > 0:
+            wd.find_element_by_link_text("home").click()
 
     def create(self, contact):
         wd = self.app.wd
@@ -76,7 +75,7 @@ class ContactHelper:
         # accept contact deletion
         wd.switch_to.alert.accept()
         # return to home page
-        wd.find_element_by_link_text('home')
+        self.open_home_page()
         self.contact_cache = None
 
     def select_first_contact(self):
@@ -163,17 +162,3 @@ class ContactHelper:
         secondaryphone = re.search('P: (.*)', text).group(1)
         return Contact(homephone=homephone, mobilephone=mobilephone,
                        workphone=workphone, secondaryphone=secondaryphone)
-
-    # def get_contact_list(self):
-    #     if self.contact_cache is None:
-    #         wd = self.app.wd
-    #         self.open_home_page()
-    #         self.contact_cache = []
-    #         count = 2
-    #         for element in wd.find_elements_by_css_selector('tr')[1:]:
-    #             lastname = element.find_element_by_xpath(f'//tr[{count}]/td[2]').text
-    #             firstname = element.find_element_by_xpath(f'//tr[{count}]/td[3]').text
-    #             id = element.find_element_by_name("selected[]").get_attribute("value")
-    #             count += 1
-    #             self.contact_cache.append(Contact(firstname=firstname, lastname=lastname, id=id))
-    #     return list(self.contact_cache)
