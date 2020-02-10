@@ -11,7 +11,7 @@ def random_string(maxlen):
     return ''.join([random.choice(symbols) for _ in range(random.randrange(maxlen))])
 
 
-n = 1
+max_tests_for_field = 1
 test_data = [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -33,7 +33,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename=random_string(20),
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -44,7 +44,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname=random_string(20), nickname='nickname',
                      title='title', company='company',
@@ -55,7 +55,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname=random_string(20),
                      title='title', company='company',
@@ -66,7 +66,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title=random_string(20), company='company',
@@ -77,7 +77,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company=random_string(20),
@@ -88,7 +88,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -99,7 +99,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -110,7 +110,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -121,7 +121,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -132,7 +132,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -143,7 +143,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -154,7 +154,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -165,7 +165,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -176,7 +176,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -187,7 +187,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage=random_string(20),
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2='address2', secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -198,7 +198,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2=random_string(20), secondaryphone='secondaryphone') for _ in range(n)] + \
+                     address2=random_string(20), secondaryphone='secondaryphone') for _ in range(max_tests_for_field)] + \
             [Contact(firstname='firstname', middlename='middlename',
                      lastname='lastname', nickname='nickname',
                      title='title', company='company',
@@ -208,7 +208,7 @@ test_data = [Contact(firstname='firstname', middlename='middlename',
                      email2='email2', email3='email3', homepage='homepage',
                      bday="1", bmonth="January", byear="1999",
                      aday="11", amonth="February", ayear="2000",
-                     address2='address2', secondaryphone=random_string(20)) for _ in range(n)]
+                     address2='address2', secondaryphone=random_string(20)) for _ in range(max_tests_for_field)]
 
 
 @pytest.mark.parametrize("contact", test_data, ids=[repr(x) for x in test_data])
@@ -219,4 +219,6 @@ def test_add_contact(app, contact):
     new_contacts = app.contact.get_contact_list()
     old_contacts.append(contact)
     assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+    old_contacts = app.contact.get_contact_list()
     app.contact.delete_contact_by_index(0)
+    assert len(old_contacts) - 1 == app.contact.count()

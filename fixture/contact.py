@@ -75,7 +75,7 @@ class ContactHelper:
         # accept contact deletion
         wd.switch_to.alert.accept()
         # return to home page
-        self.open_home_page()
+        wd.find_element_by_link_text("home").click()
         self.contact_cache = None
 
     def select_first_contact(self):
