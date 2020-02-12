@@ -25,8 +25,8 @@ def test_data_on_contact_page(app):
     assert contact_from_homepage.lastname == contact_from_editpage.lastname
     assert contact_from_homepage.address == contact_from_editpage.address
     assert contact_from_homepage.address == contact_from_editpage.address
-    assert contact_from_homepage.all_phones_from_home_page == merge_phones_like_on_homepage(contact_from_editpage)
-    assert contact_from_homepage.all_emails_from_home_page == merge_emails_like_on_homepage(contact_from_editpage)
+    assert clear(contact_from_homepage.all_phones_from_home_page) == merge_phones_like_on_homepage(contact_from_editpage)
+    assert clear(contact_from_homepage.all_emails_from_home_page) == merge_emails_like_on_homepage(contact_from_editpage)
 
 
 def merge_phones_like_on_homepage(contact):
@@ -45,4 +45,4 @@ def merge_emails_like_on_homepage(contact):
 
 
 def clear(s):
-    return re.sub('[ ()-]', '', s)
+    return re.sub(r'[ ()-/.]', '', s)
