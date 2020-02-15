@@ -245,6 +245,6 @@ test_data = [Contact(firstname='Степан ', middlename='Иванович ',
 
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f)
 
-with open(file, 'w') as out:
-    jsonpickle.set_encoder_options('json', indent=2)
+with open(file, 'w', encoding='Windows-1251') as out:
+    jsonpickle.set_encoder_options('json', indent=2, ensure_ascii=False)
     out.write(jsonpickle.encode(test_data))
