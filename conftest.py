@@ -22,9 +22,8 @@ def load_config(file):
 @pytest.fixture
 def app(request):
     global fixture
-    global target
     browser = request.config.getoption('--browser')
-    web_config = request.config.getoption("--target")["web"]
+    web_config = load_config(request.config.getoption("--target"))["web"]
     if fixture is None or not fixture.is_valid():
         fixture = Application(browser=browser, base_url=web_config["baseUrl"])
     fixture.session.ensure_login(username=web_config["username"], password=web_config["password"])
@@ -43,7 +42,7 @@ def stop(request):
 
 @pytest.fixture(scope='session')
 def db(request):
-    db_config = request.config.getoption("--target")["db"]
+    db_config = load_config(request.config.getoption("--target"))["db"]
     dbfixture = DbFixture(host=db_config["host"],
                           name=db_config["name"],
                           user=db_config["user"],
@@ -51,7 +50,6 @@ def db(request):
 
     def fin():
         dbfixture.destroy()
-
     request.addfinalizer(fin)
     return dbfixture
 
