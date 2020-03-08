@@ -45,11 +45,13 @@ class Contact:
                f"homepage={self.homepage}, bday={self.bday}, bmonth={self.bmonth}, byear={self.byear}, " \
                f"aday={self.bday}, amonth={self.bmonth}, ayear={self.byear}, address2={self.address2}, " \
                f"secondaryphone={self.secondaryphone}, all_phones_from_home_page={self.all_phones_from_home_page}," \
-               f"all_emails_from_home_page={self.all_emails_from_home_page}"
+               f"all_emails_from_home_page={self.all_emails_from_home_page}, id={self.id}"
 
     def __eq__(self, other):
         return self.lastname == other.lastname, self.firstname == other.firstname and \
-               (self.id is None or other.id is None or self.id == other.id)
+               (self.id is None or other.id is None or self.id == other.id) and \
+               self.all_emails_from_home_page == other.all_emails_from_home_page and \
+               self.all_phones_from_home_page == other.all_phones_from_home_page
 
     def id_or_max(self):
         if self.id:

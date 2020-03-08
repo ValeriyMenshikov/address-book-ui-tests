@@ -130,6 +130,20 @@ class ContactHelper:
         self.app.return_to_home_page()
         self.contact_cache = None
 
+    def add_contact_to_group_by_index(self, contact_index, group_for_add):
+        wd = self.app.wd
+        self.select_contact_by_index(contact_index)
+        self.change_select_field_value("to_group", group_for_add)
+        wd.find_element_by_name("add").click()
+        wd.find_element_by_link_text(f'group page "{group_for_add}"').click()
+
+    def delete_contact_from_group_by_index(self, contact_index, delete_from_group):
+        wd = self.app.wd
+        self.change_select_field_value("group", delete_from_group)
+        self.select_contact_by_index(contact_index)
+        wd.find_element_by_name("remove").click()
+        wd.find_element_by_link_text(f'group page "{delete_from_group}"').click()
+
     def open_view_contact_by_index(self, index):
         wd = self.app.wd
         self.open_home_page()
