@@ -45,7 +45,11 @@ def test_data_on_contact_page_and_db(app, db):
         app.contact.create(contact)
     contacts_from_homepage = app.contact.get_contact_list()
     contacts_from_db = db.get_contact_list()
-    assert contacts_from_homepage == contacts_from_db
+
+    assert len(contacts_from_homepage) == len(contacts_from_db)
+    for i in range(len(contacts_from_homepage)):
+        assert clear(contacts_from_homepage[i].all_phones_from_home_page) == merge_phones_like_on_homepage(contacts_from_db[i])
+        assert clear(contacts_from_homepage[i].all_emails_from_home_page) == merge_emails_like_on_homepage(contacts_from_db[i])
 
 
 def merge_phones_like_on_homepage(contact):
