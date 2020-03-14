@@ -132,7 +132,7 @@ class ContactHelper:
 
     def add_contact_to_group_by_index(self, contact_index, group_for_add):
         wd = self.app.wd
-        self.select_contact_by_index(contact_index)
+        wd.find_element_by_css_selector(f"input[id='{contact_index}']").click()
         self.change_select_field_value("to_group", group_for_add)
         wd.find_element_by_name("add").click()
         wd.find_element_by_link_text(f'group page "{group_for_add}"').click()

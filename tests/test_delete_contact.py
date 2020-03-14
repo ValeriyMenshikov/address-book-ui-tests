@@ -36,8 +36,8 @@ def test_delete_contact_from_group(app, orm):
         app.group.create(group)
 
     groups = orm.get_group_list()
-    contacts = orm.get_contact_list()
-    contact_index = randrange(len(contacts))
+    contacts = [c.id for c in orm.get_contact_list()]
+    contact_index = choice(contacts)
     group_index = randrange(len(groups))
     delete_from_group = groups[group_index].name
     old_contacts_in_group = orm.get_contact_in_group(Group(id=groups[group_index].id))
@@ -46,4 +46,4 @@ def test_delete_contact_from_group(app, orm):
         contact_index = 0
     app.contact.delete_contact_from_group_by_index(contact_index, delete_from_group)
     new_contacts_in_group = orm.get_contact_in_group(Group(id=groups[group_index].id))
-    assert contacts[contact_index].id not in str(new_contacts_in_group)
+    assert str(contact_index) not in str(new_contacts_in_group)
