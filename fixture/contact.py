@@ -132,6 +132,7 @@ class ContactHelper:
 
     def add_contact_to_group_by_index(self, contact_index, group_for_add):
         wd = self.app.wd
+        self.open_home_page()
         wd.find_element_by_css_selector(f"input[id='{contact_index}']").click()
         self.change_select_field_value("to_group", group_for_add)
         wd.find_element_by_name("add").click()
@@ -140,7 +141,7 @@ class ContactHelper:
     def delete_contact_from_group_by_index(self, contact_index, delete_from_group):
         wd = self.app.wd
         self.change_select_field_value("group", delete_from_group)
-        self.select_contact_by_index(contact_index)
+        wd.find_element_by_css_selector(f"input[id='{contact_index}']").click()
         wd.find_element_by_name("remove").click()
         wd.find_element_by_link_text(f'group page "{delete_from_group}"').click()
 
