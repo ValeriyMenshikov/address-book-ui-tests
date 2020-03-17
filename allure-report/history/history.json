@@ -1,0 +1,60 @@
+{
+  "657bbe594af09b82b3fa0e80d9b1e86e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "23804ec1644f1f62",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584449545790,
+        "stop" : 1584449546388,
+        "duration" : 598
+      }
+    } ]
+  },
+  "eb4d0cf8694947e8084e47f5c3f6c26a" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b948bb44331e8c2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert [Name=asda, i...r=footer, ...] == [Name=asda, i...r=footer, ...]\n  Left contains one more item: Name=name1', id=None, Header=header1, Footer=footer\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1584449546468,
+        "stop" : 1584449547176,
+        "duration" : 708
+      }
+    } ]
+  },
+  "b85dd9e2c1498c39530c9409f5bb2c6d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "87e65049b335c912",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584449544434,
+        "stop" : 1584449545704,
+        "duration" : 1270
+      }
+    } ]
+  }
+}

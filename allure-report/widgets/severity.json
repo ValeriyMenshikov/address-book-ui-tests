@@ -1,0 +1,31 @@
+[ {
+  "uid" : "b948bb44331e8c2",
+  "name" : "test_add_group[Name=name1', id=None, Header=header1, Footer=footer]",
+  "time" : {
+    "start" : 1584449546468,
+    "stop" : 1584449547176,
+    "duration" : 708
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "23804ec1644f1f62",
+  "name" : "test_add_group[Name=name1, id=None, Header=header1, Footer=footer]",
+  "time" : {
+    "start" : 1584449545790,
+    "stop" : 1584449546388,
+    "duration" : 598
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87e65049b335c912",
+  "name" : "test_add_group[Name=name, id=None, Header=header, Footer=footer]",
+  "time" : {
+    "start" : 1584449544434,
+    "stop" : 1584449545704,
+    "duration" : 1270
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

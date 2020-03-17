@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Mar 17 18:52:24 GMT+06:00 2020","Tue Mar 17 18:52:25 GMT+06:00 2020","1270","tests","test_add_group","","","","test_add_group[Name=name, id=None, Header=header, Footer=footer]",""
+"passed","Tue Mar 17 18:52:25 GMT+06:00 2020","Tue Mar 17 18:52:26 GMT+06:00 2020","598","tests","test_add_group","","","","test_add_group[Name=name1, id=None, Header=header1, Footer=footer]",""
+"failed","Tue Mar 17 18:52:26 GMT+06:00 2020","Tue Mar 17 18:52:27 GMT+06:00 2020","708","tests","test_add_group","","","","test_add_group[Name=name1', id=None, Header=header1, Footer=footer]",""
