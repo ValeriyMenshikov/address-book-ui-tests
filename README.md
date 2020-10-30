@@ -1,1 +1,1 @@
-# Repository for python training
+# Address book UI tests
